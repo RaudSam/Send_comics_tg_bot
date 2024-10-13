@@ -32,7 +32,7 @@ def get_comics(comic_numb):
 
 async def publish_a_comics(image_name, comments, token, chat_id):
     bot = telegram.Bot(token = token)
-    bot.send_message(chat_id=chat_id, text=comments)
+    await bot.send_message(chat_id=chat_id, text=comments)
     with open(image_name, 'rb') as file:
         await bot.send_photo(chat_id=chat_id, photo=file)
 
