@@ -39,8 +39,8 @@ async def publish_a_comics(image_name, comments, token, chat_id):
 
 if __name__ == '__main__':
     load_dotenv()
-    token = os.getenv('TG_TOKEN')
-    chat_id = os.getenv('TG_CHAT_ID')
+    token = os.environ['TG_TOKEN']
+    chat_id = os.environ['TG_CHAT_ID']
 
     comic_numb = get_comic_number()
     try:
